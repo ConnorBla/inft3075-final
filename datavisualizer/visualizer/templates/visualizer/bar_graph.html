@@ -1,0 +1,53 @@
+{% extends 'visualizer/base.html' %}
+{% load static %}
+
+{% block title %}Bar Graph Visualizer{% endblock %}
+
+{% block content %}
+    <h2>Bar Graph Visualizer</h2>
+    <div class="graph-page">
+        <!-- Graph Container -->
+        <div class="graph-container">
+            <img id="bar-graph" src="data:image/png;base64,{{ plot_image }}" alt="Bar Graph">
+            <button id="download-btn">Download Chart</button>
+        </div>
+
+        <!-- Inputs Container -->
+        <div class="inputs-container">
+            <h3>Change Bar Graph Labels:</h3>
+            <div id="labels">
+                <input id="title_label" type="text" class="label" placeholder="Enter chart title">
+                <input id="x_axis_label" type="text" class="label" placeholder="Enter label for x-axis">
+                <input id="y_axis_label" type="text" class="label" placeholder="Enter label for y-axis">
+            </div>
+            <h3>Change Bar Graph Data:</h3>
+            <table id="input-table">
+                <thead>
+                    <tr>
+                        <th>Label</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="label" placeholder="Enter label" value="Apples"></td>
+                        <td><input type="number" class="value" placeholder="Enter value" value="30"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="label" placeholder="Enter label" value="Bananas"></td>
+                        <td><input type="number" class="value" placeholder="Enter value" value="50"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="label" placeholder="Enter label" value="Oranges"></td>
+                        <td><input type="number" class="value" placeholder="Enter value" value="20"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="buttons">
+                <button id="add-row">Add Row</button>
+                <button id="update-graph">Update Chart</button>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/bar_graph.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,28 @@
+/* Styles for the navbar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: rgb(159, 20, 20);
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Styling for the content */
+.content {
+    padding: 20px;
+}
